@@ -3,7 +3,7 @@ import axios from "axios";
 
 const GlobalContext = createContext();
 
-const GlobalProvider = ({ children }) => {
+const PostProvider = ({ children }) => {
   const baseApiUrl = "http://localhost:3000/posts";
   const [posts, setPosts] = useState([]);
 
@@ -12,4 +12,16 @@ const GlobalProvider = ({ children }) => {
       setPosts(res.data);
     });
   };
+
+  return (
+    <PostContext.Provider value={{ posts, setPosts }}>
+      {children}
+    </PostContext.Provider>
+  );
 };
+
+const useGlobalContext = () => {
+  return useContext(PostContext);
+};
+
+export { useGlobalContext, PostProvider };
