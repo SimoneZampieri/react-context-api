@@ -1,10 +1,10 @@
-import PostList from "./PostList";
+import PostPage from "./PostPage";
 
 const Main = () => {
   return (
-    <main>
-      <PostList />
-    </main>
+    <>
+      <PostPage />
+    </>
   );
 };
 
