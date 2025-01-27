@@ -10,7 +10,7 @@ const PostList = () => {
   return (
     <div className="container d-flex">
       {posts.map((post) => (
-        <div className="card m-2" key={post.id}>
+        <div className="card m-3 cardcont" key={post.id}>
           <img src={post.image} alt={post.title} className="card-img-top" />
           <div className="card-body">
             <h5 className="card-title">{post.title}</h5>

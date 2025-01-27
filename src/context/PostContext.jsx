@@ -14,7 +14,7 @@ const PostProvider = ({ children }) => {
   };
 
   return (
-    <GlobalContext.Provider value={{ posts, setPosts }}>
+    <GlobalContext.Provider value={{ posts, setPosts, fetchPosts }}>
       {children}
     </GlobalContext.Provider>
   );
