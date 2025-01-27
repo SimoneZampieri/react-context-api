@@ -14,14 +14,14 @@ const PostProvider = ({ children }) => {
   };
 
   return (
-    <PostContext.Provider value={{ posts, setPosts }}>
+    <GlobalContext.Provider value={{ posts, setPosts }}>
       {children}
-    </PostContext.Provider>
+    </GlobalContext.Provider>
   );
 };
 
 const useGlobalContext = () => {
-  return useContext(PostContext);
+  return useContext(GlobalContext);
 };
 
 export { useGlobalContext, PostProvider };
